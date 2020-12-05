@@ -93,7 +93,7 @@ Now, let's see some attack scenarios.
 
 The URL is transmitted in clear, it can be intercepted. In case the attacker access the token before Bob, Bob won't be able to see the token, so it makes no sense. It is interesting, however, if the attacker intercepts the request, makes another one, and replace the original with its own, thus allowing to intercept and re-encrypt any further communication (only if the token is not used as a seed, so not requiring both sides synchronization). Parties could, nevertheless, verify the integrity of their tokens/URLs by exchanging hashes, although, it can be more complicated for an attacker if done by another communication channel (email, SMS, messenger, etc.), the attack is still plausible.
 
-Unfortunately, such interception can be done on multiple levels, an attacker can redirect domain name or have a backdoor in one of your certificate authorities, as well as intercept the very first HTTP connection to the server, thus bypassing HSTS. It can be your neighbor or your government.
+Unfortunately, such interception can be done on multiple levels, an attacker can redirect domain name or have a backdoor in one of your certificate authorities (or a rogue certificate), as well as intercept the very first HTTP connection to the server, thus bypassing HSTS. It can be your neighbor or your government.
 
 That said, the most practical way to break the security is MITM.
 
